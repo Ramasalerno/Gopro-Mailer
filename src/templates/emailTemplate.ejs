@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Solicitud de Distribuidor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Montserrat', 'Segoe UI';
+            background-color: #e5e7eb;
+            color: #000000;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            /* -webkit-font-smoothing: antialiased; */
+        }
+        .container {
+            max-width: 850px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            font-weight: 800;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 14px;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 10px;
+            /* text-decoration: underline; */
+        }
+        .info {
+            color: #000000;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .label {
+            font-weight: 600;
+            color: #575757;
+        }
+        .row {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            width: 48%;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nueva Solicitud de Distribuidor</h2>
+        <div class="row">
+            <div class="column">
+                <p class="subtitle">Información del distribuidor postulante:</p>
+                <p class="info"><span class="label">Nombre:</span> <%= data.nombre %></p>
+                <p class="info"><span class="label">Número de Teléfono:</span> <%= data.apellido %></p>
+                <p class="info"><span class="label">Correo Electrónico:</span> <%= data.email %></p>
+                <p class="info"><span class="label">Razón Social:</span> <%= data.razonSocial %></p>
+                <p class="info"><span class="label">País:</span> <%= data.pais %></p>     
+                <p class="info"><span class="label">Redes Sociales:</span> <%= data.redesSociales %></p>
+                <p class="info"><span class="label">Página Web:</span> <%= data.paginaWeb %></p>
+            </div>
+            <div class="column">
+                <p class="subtitle">Evaluación de leads:</p>
+                <p class="info"><span class="label">Capacidad de Inversión Inicial:</span> <%= data.capacidadInversion ? "Si" : "No"%></p>
+                <p class="info"><span class="label">Cuenta con Tienda Física:</span> <%= data.tiendaFisica ? "Si" : "No"%> </p>
+                <p class="info"><span class="label">Sector/Nicho del Negocio:</span> <%= data.nichoDeNegocio %></p>
+                <p class="info"><span class="label">Venta en Línea o Marketplace:</span> <%= data.ventaOnline ? "Si" : "No"%></p>
+                <p class="info"><span class="label">Medio Preferido de Contacto:</span> <%= data.medioDeContacto %></p>
+                <img src="https://raw.githubusercontent.com/RamiroSB/imagenes/refs/heads/main/goproimg.png" alt="logo-GoPro">
+            </div>
+        </div>
+        <p class="footer">Este mensaje ha sido generado automáticamente a partir de una nueva solicitud de distribución.</p>
+    </div>
+</body>
+</html>
